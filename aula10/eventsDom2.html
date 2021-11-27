@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+    <h1>Somando números</h1>
+    <input type='number' name='txt1' id='id1'> +  <!--Caixa de entrada1-->
+    <input type='number' name='txt2' id='id2'>    <!--Caixa de entrada2-->
+    <input type='button' value=' = ' onclick=clicou() id='b'>  <!--Botao-->
+    <div id='res'>Resultado=</div>
+    
+    <script>
+        
+        function clicou(){
+            var n1 = window.document.getElementById('id1')
+            var n2 = window.document.querySelector('input#id2')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = (n1+n2)
+        }
+
+    </script>
+</body>
+</html>

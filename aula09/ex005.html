@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+        <style> /* CSS */
+
+
+        </style>
+</head>
+<body> <!--HTML-->
+    <h1>Document Object Model</h1>
+    <p>Usado para manipular documentos HTML</p> <!--[0]-->
+    <p>Arvore <strong>DOM</strong>, começa com window e vai se dividindo em elementos</p><!--[0]-->
+    <div id='msg'>Clique aqui</div>
+    <!--HTML-->
+    
+    <script> // JavaScript
+    /* É possivel selecionar elementos de 5 formas, por:
+    - Name  
+    - Id
+    - TagName
+    - ClassName
+    - Seletor (presente apenas nas versões mais recentes) (seleção por CSS)
+*/
+        // Selecinando por nome? 
+        var p1 = window.document.getElementsByTagName('p')[1] // como Elements esta no plural Retorna todos elementos 'p'[index]
+        p1.style.color = 'blue' // muda a cor do p1 
+        //window.document.writeln(p1.innerText) // .innerText retorna o texto do elemento
+        //window.document.writeln('<br/>' + p1.innerHTML) // .innerHTML retorna o texto do elemento com tag? html
+        
+        var corpo = window.document.body
+        corpo.style.background = 'red' 
+        // Selecionando por Id
+        var d = window.document.getElementById('msg')// como Element esta no singular Retorna retorna apenas o id especifico
+        d.style.color = 'yellow'
+        d.innerText = 'Mudei o div'
+    
+        // Selecionando por Seletor
+        var d = window.document.querySelector('div#msg') // (Sintaxe do CSS), onde # é id e '.'(ponto) é classe
+    </script>
+    
+</body>
+</html>

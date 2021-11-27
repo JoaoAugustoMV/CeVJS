@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>Velocidade Máxima permitida: 60km/h</p>
+    Velocidade: <input type='number' id='velo'> Km/h
+    <input type='button' value='Verificar' onclick=clicou()>
+    <div id='p'></div>
+
+    <script>
+        function clicou(){
+            var p = window.document.getElementById('p')
+            var velo = window.document.getElementById('velo')
+            velo = Number(velo.value)
+            p.innerHTML = ''
+            if (velo > 60) {
+                p.innerHTML += ('<p>VC foi multado</div>')
+            } else {
+                p.innerHTML += ('<p>Sem problemas, continue o trajeto</p>')
+            }
+            
+        }
+
+    </script>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style> /*Comentario em CSS */
+    
+        body{
+            background-color: rgb(1, 31, 31);
+            color: rgb(246, 246, 248);
+            font: normal 30pt Arial;
+        }
+
+    </style> 
+</head>
+<body> <!--Comentários em HTML-->
+    <script> // Comentario em JavaScript
+       nome = 'Joao' // str normal (pode ser com aspas duplas)
+       idade = 19
+       nota = 7
+    document.write(`O ${nome} de ${idade} anos, tirou ${nota}<br/>`) // template string é com a crase(``)
+               //   ${placeholder}                           <br/> tag html para quebra de linha
+    document.write(`O nome <strong>${nome.toUpperCase()}<strong/> tem ${nome.length} letras`)
+                        // <strong>Tag html para NEGRITO<strong/>
+    </script> <!--End JavaScript-->
+</body>
+</html>

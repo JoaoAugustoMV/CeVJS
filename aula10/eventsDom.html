@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style> /* CSS*/
+        div#texto { /* #id*/
+            font: Arial;
+            background: black;
+            width: 800px;
+            height: 100px;
+            color:white;
+            line-height: 100px;
+
+        }
+        div#area {
+            font: Arial;
+            font-size: 30pt;
+            background: green;
+            width: 200px;
+            height: 200px;
+            color:white;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='texto'>
+        Eventos DOM, são coisas que podem acontecer com um elemento, exemplo passar o mouse encima ou clicar, desce a pag.
+    </div>
+        
+        <!--eventoDOM=função que será chamada-->
+        <!--Ou seja, ao acontecer algum evento DOM, resultará na chamada da função respectiva-->
+    <div id='area' >
+    <!--Evento DOM pelo HTML-->
+<!--<div id='area' onclick=clicar() onmouseenter='entrou()' onmouseout="saiu()">-->
+        Interaja...
+    </div>
+    
+    <script>
+        var area = window.document.getElementById('area')
+        // Eventos DOM pelo JS
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrou)
+        area.addEventListener('mouseout', saiu)
+        function clicar(){
+            area.innerText = 'Clicou'
+            area.style.background = 'red'
+        }
+        function entrou(){         
+            area.innerHTML = 'entrou'
+        }
+        function saiu(){
+            area.innerHTML = 'Interaja'
+        }
+
+    </script>
+</body>
+</html>
